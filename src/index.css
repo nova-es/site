@@ -1,28 +1,18 @@
 @import "tailwindcss";
 
-/* =========================
-   Fontes (Tailwind v4)
-   ========================= */
+/* Fontes (Tailwind v4) */
 @theme {
   --font-sans: "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-display: "Clash Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
-/* =========================
-   Aplicação global
-   ========================= */
+/* Aplicação global no "base" (prioridade correta no Tailwind) */
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
 
-/* Corpo do site */
-body {
-  font-family: var(--font-sans);
-}
-
-/* Títulos (FORÇADO para evitar override do Tailwind/utility classes) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Clash Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
-}
-
-/* Classe usada no JSX (ex.: font-display) */
-.font-display {
-  font-family: "Clash Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display) !important;
+  }
 }
