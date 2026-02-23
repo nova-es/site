@@ -1,6 +1,25 @@
 @import "tailwindcss";
 
+/* =========================
+   Configuração de Fontes (Tailwind v4)
+   ========================= */
+
 @theme {
-  --font-sans: "General Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Clash Grotesk", ui-serif, Georgia, serif;
+  --font-sans: "General Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Clash Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================
+   Aplicação Global
+   ========================= */
+
+/* Corpo do site */
+body {
+  font-family: var(--font-sans);
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: var(--font-display);
 }
